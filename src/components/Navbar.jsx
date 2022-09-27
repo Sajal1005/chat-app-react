@@ -12,11 +12,17 @@ const Navbar = () => {
     const [user] = useAuthState(auth)
     console.log(user)
   return (
-    <div className={style.nav}>
-      <h1 className={style.heading}>Chat App</h1>
-      {user ? <LogOut /> : <SignIn />}
-
-    </div>
+    <header class="h-1/7  top-0 block text-gray-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      
+      <span class="ml-80 text-xl text-white">CIAO</span>
+    </a>
+    <button class="inline-flex items-center  border-0 py-1 px-3 focus:outline-none ml-96 rounded text-base mt-4 md:mt-0">
+    {user ? <LogOut /> : <SignIn />}
+    </button>
+  </div>
+</header>
   );
 };
 
