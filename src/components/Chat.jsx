@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Message from './Message';
-import SendMessage from './SendMessage';
-import { db } from '../firebase';
-import { query, collection, orderBy, onSnapshot } from 'firebase/firestore';
+import React, { useState, useEffect, useRef } from "react";
+import Message from "./Message";
+import SendMessage from "./SendMessage";
+import { db } from "../firebase";
+import { query, collection, orderBy, onSnapshot } from "firebase/firestore";
 
 const style = {
   main: `flex flex-col p-[10px] gap-4  mb-16 mt-16`,
@@ -13,7 +13,7 @@ const Chat = () => {
   const scroll = useRef();
 
   useEffect(() => {
-    const q = query(collection(db, 'messages'), orderBy('timestamp'));
+    const q = query(collection(db, "messages"), orderBy("timestamp"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       let messages = [];
       querySnapshot.forEach((doc) => {
@@ -25,7 +25,7 @@ const Chat = () => {
   }, []);
 
   return (
-    <>
+    <div className="overflow-y-scroll h-4/5 bg-slate-700 fixed right-0 left-0">
       <main className={style.main}>
         {messages &&
           messages.map((message) => (
@@ -33,9 +33,7 @@ const Chat = () => {
           ))}
       </main>
       {/* Send Message Compoenent */}
-      <SendMessage scroll={scroll} />
-      <span ref={scroll}></span>
-    </>
+    </div>
   );
 };
 
