@@ -25,7 +25,7 @@ const Chat = () => {
   }, []);
 
   return (
-    <div className="overflow-y-scroll h-4/5 bg-slate-700 fixed right-0 left-0">
+    <div className="overflow-y-scroll h-4/5  fixed right-0 left-0">
       <main className={style.main}>
         {messages &&
           messages.map((message) => (
