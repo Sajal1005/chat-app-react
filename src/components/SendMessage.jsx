@@ -4,8 +4,8 @@ import {addDoc, collection, serverTimestamp} from 'firebase/firestore'
 
 const style = {
   form: `h-1/7 w-full  flex text-xl fixed bottom-0`,
-  input: `w-full text-xl p-3 bg-gray-900 text-white outline-none border-none`,
-  button: ` w-[20%] bg-blue-100 flex items-center justify-between`,
+  input: `w-full text-xl p-3 bg-gray-900 text-white outline-none border-none rounded`,
+  button: ` w-[20%] items-center text-white bg-blue-700 border-0 py-3 px-3 focus:outline-none rounded text-base `,
 };
 
 const SendMessage = ({scroll}) => {
@@ -38,7 +38,7 @@ const SendMessage = ({scroll}) => {
         placeholder='Message'
       />
       <button className={style.button} type='submit'>
-        <img className='m-auto' src="https://img.icons8.com/fluency/2x/filled-sent.png" height='10px' width='40px' alt="" />
+        SEND
       </button>
     </form>
   );
