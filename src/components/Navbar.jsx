@@ -16,9 +16,9 @@ const Navbar = () => {
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
       
-      <span class="ml-80 text-xl text-white">CIAO</span>
+      <span class="lg:ml-80 text-xl text-white">CIAO</span>
     </a>
-    <button class="inline-flex items-center  border-0 py-1 px-3 focus:outline-none ml-96 rounded text-base mt-4 md:mt-0">
+    <button class="inline-flex items-center  border-0 py-1 px-3 focus:outline-none lg:ml-96 rounded text-base mt-4 ">
     {user ? <LogOut /> : <SignIn />}
     </button>
   </div>
